@@ -61,13 +61,13 @@ of two of the colors black, white, blue, yellow, and red. Note
 that you should include only one of (black, blue) and (blue, black). -}
 
 colors = ["black", "white", "blue", "yellow", "red"]
-colorssorted = [(a, b) | a <- colors, b <- colors, a < b]
+colorssorted = [(a, b) | a <- colors, b <- colors]
 
 {- Write a list comprehension to build a childhood multiplication
 table. The table would be a list of three-tuples where the first two
 are integers from 1–12 and the third is the product of the first two. -}
-numbers = [1..12]
-[(a, b, c) | ]
+
+tables = [(a, b, c) | a <- [1..12], b <- [1..12], let c = a * b]
 
 {- Solve the map-coloring problem (Section 4.2, Map Coloring, on
 page 101) using Haskell. -}
